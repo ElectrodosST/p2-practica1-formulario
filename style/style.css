@@ -1,0 +1,56 @@
+.titulo{
+    text-align: center;
+    padding: 10px;
+}
+.barra {
+    background-color: black;
+    padding: 15px 30px; 
+}
+
+.navegacion {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.barra a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px; 
+    font-size: 16px;
+}
+.barra1 p{
+    background-color: black;
+    color: black;
+    text-align: center;
+    padding: 15px 0px;
+    margin:0;
+
+}
+.tablitas{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    border-collapse: collapse; 
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+
+th, td {
+    border: 2px solid black; 
+    padding: 12px;
+    text-align: center;
+}
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: flex; 
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}

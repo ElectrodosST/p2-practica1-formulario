@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión / Registrarse - SHEIN</title>
+    <link rel="stylesheet" href="style/formulario.css">
+</head>
+<body>
+
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal-auth" style="position:relative;">
+
+        <a class="btn-cerrar-modal" href="javascript:void(0);" onclick="cerrarModal()">✕</a>
+        <div id="formLogin">
+            <div class="modal-auth-header">
+                <div class="icon"><img src="fondo.jpg" alt="Logo"></div>
+                <h2>Iniciar Sesión</h2>
+            </div>
+            <div class="msg-error" id="loginError"></div>
+            <div class="form-group">
+                <label>Usuario</label>
+                <input type="text" id="loginUsername" placeholder="Tu nombre de usuario" autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="loginPassword" placeholder="Tu contraseña" autocomplete="current-password" onkeydown="if(event.key==='Enter') doLogin()">
+            </div>
+            <button class="btn-submit" id="btnLogin" onclick="doLogin()">Entrar</button>
+            <div class="modal-switch">¿No tienes cuenta? <a href="javascript:void(0);" onclick="switchForm('register')">Regístrate aquí</a></div>
+        </div>
+        <div id="formRegister" style="display:none;">
+            <div class="modal-auth-header">
+                <h2>Crear Cuenta</h2>
+            </div>
+            <div class="msg-error" id="registerError"></div>
+            <div class="msg-ok" id="registerOk"></div>
+            <div class="form-group">
+                <label>Nombre completo</label>
+                <input type="text" id="regNombre" placeholder="Ej: Juan Pérez">
+            </div>
+            <div class="form-group">
+                <label>Usuario</label>
+                <input type="text" id="regUsername" placeholder="Sin espacios" autocomplete="username">
+            </div>
+            <div class="form-group">
+                <label>Contraseña</label>
+                <input type="password" id="regPassword" placeholder="Mínimo 6 caracteres" autocomplete="new-password">
+            </div>
+            <button class="btn-submit" id="btnRegister" onclick="doRegister()">Crear cuenta</button>
+            <div class="modal-switch">¿Ya tienes cuenta? <a href="javascript:void(0);" onclick="switchForm('login')">Inicia sesión</a></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/login.js"></script>
+</body>
+</html>
