@@ -85,7 +85,7 @@ async function doRegister() {
     if (errorDiv) errorDiv.innerText = '';
 
     try {
-        // Apuntamos al archivo PHP local
+
         const respuesta = await fetch('conexion/registro.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
