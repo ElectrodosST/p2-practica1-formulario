@@ -27,7 +27,6 @@ try {
         exit;
     }
 
-    // 2. Insertar si está libre
     $sql = "INSERT INTO usuarios (nombre, usuario, contrasena) VALUES (:nombre, :usuario, :contrasena)";
     $insert = $conexion->prepare($sql);
     $insert->execute([
